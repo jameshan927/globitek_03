@@ -49,9 +49,11 @@ The following **required** functionality is completed:
 
 The following advanced user stories are optional:
 
-* [ ]  Bonus Objective 1: Identify security flaw in Objective #4 (requiring login on staff pages)
-  * [ ]  Identify the security principal not being followed.
-  * [ ]  Write a short description of how the code could be modified to be more secure.
+* [X]  Bonus Objective 1: Identify security flaw in Objective #4 (requiring login on staff pages)
+  * [X]  Identify the security principal not being followed.
+  * [X]  Write a short description of how the code could be modified to be more secure.
+  
+  The fundamental security principal that the login page does not follow is "Prefer whitelisting over blacklisting".  This is because the staff pages that currently exist require a login in order to be accessed.  However if another page is created that doesn't require a login, that page will not be secure against users that are not logged in.  In order to prevent this, changing the code so that you whitelist the pages that do not require a login makes it easier to make sure that all the pages you want to be secure are secure.
 
 * [X] Bonus Objective 2: Add CSRF protections to all forms in the staff directory
 
